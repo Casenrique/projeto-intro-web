@@ -31,19 +31,19 @@ console.log(verificaGenerosMasculinos);
 
 //6. Exiba um relatório utilizando console.log(), mostrando todos os dados de cada um dos itens criados até aqui
 console.log(`${nomePersonagem1.toUpperCase()}
-Identidade: "${identidade1}
+Identidade: ${identidade1}
 Altura: ${altura1} m
 Personagem do gênero masculino? ${generoMasculino1}
 Outras Identidades: ${outrasIdentidades1}
 
 ${nomePersonagem2.toUpperCase()}
-Identidade: "${identidade2}
+Identidade: ${identidade2}
 Altura: ${altura2} m
 Personagem do gênero masculino? ${generoMasculino2}
 Outras Identidades: ${outrasIdentidades2}
 
 ${nomePersonagem3.toUpperCase()}
-Identidade: "${identidade3}
+Identidade: ${identidade3}
 Altura: ${altura3} m
 Personagem do gênero masculino? ${generoMasculino3}
 Outras Identidades: ${outrasIdentidades3}
