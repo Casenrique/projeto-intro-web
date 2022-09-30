@@ -3,7 +3,8 @@ const personagem1 = {
     identidade: "Professor X",
     altura: 1.83,
     generoMasculino: true,
-    outrasIdentidades: ["\"X\"", "\"Prisioneiro M-13\"", "\"Acushla\""]
+    outrasIdentidades: ["\"X\"", "\"Prisioneiro M-13\"", "\"Acushla\""],
+    foto: "imagem"
 }
 
 const personagem2 = {
@@ -11,7 +12,8 @@ const personagem2 = {
     identidade: "Black Widow",
     altura: 1.65,
     generoMasculino: false,
-    outrasIdentidades: ["\"Natalie Rushman\"", "\"Tatiana Sokova\"", "\"Melina Vostokoff\""]
+    outrasIdentidades: ["\"Natalie Rushman\"", "\"Tatiana Sokova\"", "\"Melina Vostokoff\""],
+    foto: "imagem"
 }
 
 const personagem3 = {
@@ -19,7 +21,8 @@ const personagem3 = {
     identidade: "Black Panther",
     altura: 1.83,
     generoMasculino: true,
-    outrasIdentidades: ["\"Tigre de carvão\"", "\"Haramu-Sarki\"", "\"Gato do Bairro\""]
+    outrasIdentidades: ["\"Tigre de carvão\"", "\"Haramu-Sarki\"", "\"Gato do Bairro\""],
+    foto: "imagem"
 }
 
 const personagens = []
@@ -132,7 +135,8 @@ const personagem4 = {
     identidade: "Spider-Man",
     altura: 1.73,
     generoMasculino: true,
-    outrasIdentidades: `"Garoto-Aranha" ,"Homem-Aranha Ultimate", "Aranha das Sombras"`
+    outrasIdentidades: `"Garoto-Aranha" ,"Homem-Aranha Ultimate", "Aranha das Sombras"`,
+    foto: "imagem"
 }
 
 personagensMasculinos.push(personagem4)
@@ -185,10 +189,6 @@ personagens.push(personagem1, personagem2, personagem3, personagem4)
 console.log(personagens)
 
 const retornaBlack = personagens.filter((possuiBlackNoNome) => {
-    if(possuiBlackNoNome.identidade === "Black Widow") {
-        console.log()
-    }
-//Adicionar o ALERT que ficou faltando
     return possuiBlackNoNome.identidade === "Black Widow"
 })
 
