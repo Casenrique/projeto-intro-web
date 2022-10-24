@@ -1,0 +1,133 @@
+/* Parte 1 - aplicando Flexbox: */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, ul, li, p {
+    list-style: none;
+    font-size: 1.0rem;
+    font-family: Arial;
+}
+
+label {
+    color: #E7E7E6;
+}
+
+a {
+    text-decoration: none;
+    color: #E7E7E6;
+}
+
+a:link {
+    text-decoration: none;
+    color: #E7E7E6;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+
+.container {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    font-family: sans-serif;
+    font-size: 1em;
+    color:  #0E191A;
+    justify-content: center;
+}
+
+header {
+    height: 6vh;
+    background-color: #8E1116;
+    color: #E7E7E6;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    font-family: sans-serif;
+    font-size: large;
+}
+
+.header {
+    display: flex;
+}
+
+main {
+    background-color: #0E191A;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    align-items: center;
+    justify-content: space-around;
+    background-image: url(./asset/background.jpg);
+    background-size: cover;
+}
+
+.footer {
+    height: 4vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: sans-serif;
+    bottom: 0;
+    background-color: #8E1116;
+    color: #E7E7E6;
+    text-align: center;
+}
+
+#busca {
+    text-align: center;
+    padding: 10px;
+    display: flex;
+    gap: 10px;
+}
+
+button {
+    border-radius: 5px;
+    font-family: sans-serif;
+    padding: 0px 10px;
+}
+
+button:hover {
+    background-color: #E7E7E6; ;
+}
+
+#principal {
+    background-color: #0E191A ;
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+    border-radius: 10px;
+}
+
+.section-fotos {
+    display: flex;    
+    background-color: #8E1116;
+    border: 1px solid black;
+    border-radius: 10px;
+    padding: 10px;
+    display: flex; 
+}
+
+.alinhamento {
+    display: flex;
+    align-items: center;
+    gap: 20px;  
+}
+
+img {
+    width: 150px;
+    border-radius: 5px;
+}
+
+.cor-lista {
+    color:#E7E7E6;
+    text-decoration: none;
+}
+.alinhar-acima {
+    align-self: center;
+}
