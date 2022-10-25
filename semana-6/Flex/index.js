@@ -4,17 +4,17 @@ const personagem1 = {
     identidade: "Professor X",
     altura: 1.83,
     generoMasculino: true,
-    outrasIdentidades: `"\"X\"", "\"Prisioneiro M-13\"", "\"Acushla\""`,
+    outrasIdentidades: `"X", "Prisioneiro M-13", "Acushla"`,
     foto: "./asset/Professor_X.jpg"
 }
 
 const personagem2 = {
-    nome: "Natalia Alianovna \"Natasha\" Romanoff",
+    nome: "Natalia Alianovna Natasha Romanoff",
     fonte: "https://marvel.fandom.com/pt-br/wiki/Natalia_Romanova_(Terra-616)",
     identidade: "Black Widow",
     altura: 1.65,
     generoMasculino: false,
-    outrasIdentidades: `"\"Natalie Rushman\"", "\"Tatiana Sokova\"", "\"Melina Vostokoff\""`,
+    outrasIdentidades: `"Natalie Rushman", "Tatiana Sokova", "Melina Vostokoff"`,
     foto: "./asset/Black_Widow.jpg"
 }
 
@@ -24,7 +24,7 @@ const personagem3 = {
     identidade: "Black Panther",
     altura: 1.83,
     generoMasculino: true,
-    outrasIdentidades: `"\"Tigre de carvão\"", "\"Haramu-Sarki\"", "\"Gato do Bairro\""`,
+    outrasIdentidades: `"Tigre de carvão", "Haramu-Sarki", "Gato do Bairro"`,
     foto: "./asset/Black_Panther.jpg"
 }
 
@@ -44,58 +44,44 @@ personagens.push(personagem1, personagem2, personagem3, personagem4)
 
 console.log(personagens)
 
-
-// function adicionaPersonagem () {
-//     const divImagemPersonagem = document.createElement("img");
-//     divImagemPersonagem.setAttribute("src", personagens[index].foto);
-//     const divReferenciaCard = document.getElementById("box1");
-//     divReferenciaCard.insertAdjacentElement("afterbegin", divImagemPersonagem);
-//     const listaNaoOrdenadaAtributos = document.createElement("ul");
-//     listaNaoOrdenadaAtributos.setAttribute("class", "alinhar-acima");
-//     divReferenciaCard.insertAdjacentElement("beforeend", listaNaoOrdenadaAtributos);
-//     const nomePersonagem = document.createElement("li");
-//     const identidadePersonagem = document.createElement("li");
-//     const alturaPersonagem = document.createElement("li");
-//     const generoPersonagem = document.createElement("li");
-//     const outrasIdentidadesPersonagem = document.createElement("li");
-
-// }
-
-// personagens.forEach(adicionaPersonagem);
-
-// divReferenciaLista.insertAdjacentElement("beforeend", listaNaoOrdenadaAtributos);
-
-// const divReferenciaLista = document.querySelectorAll("alinhar-acima");
-// console.log(divReferenciaLista)
-// const nomePersonagem = document.createElement("li");
-// const identidadePersonagem = document.createElement("li");
-// const alturaPersonagem = document.createElement("li");
-// const generoPersonagem = document.createElement("li");
-// const outrasIdentidadesPersonagem = document.createElement("li");
-
-
 personagens.forEach(adicionaPersonagem)
 
 function adicionaPersonagem (cadaPersonagem, index, arr) {
     console.log(cadaPersonagem)
     
-    let divReferenciaLista = document.getElementById("box1");
+    //Criando referência para lista não ordenada
+    let divReferenciaLista = document.getElementById(`box${index+1}`);
     console.log(divReferenciaLista);
     let listaNaoOrdenadaAtributos = document.createElement("ul");
+    //Criando items da lista
     let nomePersonagem = document.createElement("li");
-    let conteudoNomePersonagem = document.createTextNode(`${cadaPersonagem.nome}`);
-    listaNaoOrdenadaAtributos.insertAdjacentElement('afterend', nomePersonagem);
-    console.log(listaNaoOrdenadaAtributos);
-    console.log(conteudoNomePersonagem.textContent);
+    let identidadePersonagem = document.createElement("li");
+    let alturaPersonagem = document.createElement("li");
+    let outrasIdentidadesPersonagem = document.createElement("li");
+    //Criando texto dos cards
+    let conteudoNomePersonagem = document.createTextNode(`Nome:  ${cadaPersonagem.nome}`);
+    let conteudoIdentidadePersonagem = document.createTextNode(`Identidade: ${cadaPersonagem.identidade}`);
+    let conteudoAlturaPersonagem = document.createTextNode(`Altura: ${cadaPersonagem.altura}`);
+    let conteudoOutrasIdentidadesPersonagem = document.createTextNode(`Outras Identidades: ${cadaPersonagem.outrasIdentidades}`);
+    //Adicionando conteúdos às tags
     nomePersonagem.appendChild(conteudoNomePersonagem);
-    console.log(nomePersonagem);
-    // divReferenciaLista.insertAdjacentElement('afterend', nomePersonagem);
-    console.log(divReferenciaLista);
+    identidadePersonagem.appendChild(conteudoIdentidadePersonagem);
+    alturaPersonagem.appendChild(conteudoAlturaPersonagem);
+    outrasIdentidadesPersonagem.appendChild(conteudoOutrasIdentidadesPersonagem);
     
+    
+    listaNaoOrdenadaAtributos.insertAdjacentElement('beforeend', identidadePersonagem);
+    listaNaoOrdenadaAtributos.insertAdjacentElement('beforeend', alturaPersonagem);
+    listaNaoOrdenadaAtributos.insertAdjacentElement('beforeend', outrasIdentidadesPersonagem);
+    listaNaoOrdenadaAtributos.insertAdjacentElement('afterbegin', nomePersonagem);
+    
+    console.log(conteudoNomePersonagem.textContent);
+
+    console.log(listaNaoOrdenadaAtributos);
+    console.log(nomePersonagem);
+    listaNaoOrdenadaAtributos.insertAdjacentElement('beforeend', nomePersonagem);
+    console.log(listaNaoOrdenadaAtributos);
+    divReferenciaLista.insertAdjacentElement('beforeend',listaNaoOrdenadaAtributos)
 }
 
 
-// let identidadePersonagem = document.createElement("li");
-// let alturaPersonagem = document.createElement("li");
-// let generoPersonagem = document.createElement("li");
-// let outrasIdentidadesPersonagem = document.createElement("li");

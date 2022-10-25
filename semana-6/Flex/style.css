@@ -34,7 +34,7 @@ a:hover {
 .container {
     display: flex;
     flex-direction: column;
-    height: 100vh;
+    /* height: 100vh; */
     font-family: sans-serif;
     font-size: 1em;
     color:  #0E191A;
@@ -42,10 +42,11 @@ a:hover {
 }
 
 header {
-    height: 6vh;
+    /* height: 6vh; */
     background-color: #8E1116;
     color: #E7E7E6;
     text-align: center;
+    flex: grow 0;
     justify-content: center;
     align-items: center;
     font-family: sans-serif;
@@ -60,7 +61,7 @@ main {
     background-color: #0E191A;
     display: flex;
     flex-direction: column;
-    flex-grow: 1;
+    flex-grow:1;
     align-items: center;
     justify-content: space-around;
     background-image: url(./asset/background.jpg);
@@ -68,8 +69,9 @@ main {
 }
 
 .footer {
-    height: 4vh;
+    /* height: 4vh; */
     display: flex;
+    flex: grow 0;
     justify-content: space-between;
     align-items: center;
     font-family: sans-serif;
@@ -99,12 +101,14 @@ button:hover {
 #principal {
     background-color: #0E191A ;
     display: flex;
+    /* flex-wrap: wrap; */
     flex-direction: column;
     gap: 7px;
     border-radius: 10px;
 }
 
 .section-fotos {
+    max-width: 600px;
     display: flex;    
     background-color: #8E1116;
     border: 1px solid black;
@@ -120,7 +124,8 @@ button:hover {
 }
 
 img {
-    width: 150px;
+    max-width: 150px;
+    /* width: 150px; */
     border-radius: 5px;
 }
 
