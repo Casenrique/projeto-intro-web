@@ -68,8 +68,7 @@ function adicionaPersonagem (cadaPersonagem, index, arr) {
     identidadePersonagem.appendChild(conteudoIdentidadePersonagem);
     alturaPersonagem.appendChild(conteudoAlturaPersonagem);
     outrasIdentidadesPersonagem.appendChild(conteudoOutrasIdentidadesPersonagem);
-    
-    
+        
     listaNaoOrdenadaAtributos.insertAdjacentElement('beforeend', identidadePersonagem);
     listaNaoOrdenadaAtributos.insertAdjacentElement('beforeend', alturaPersonagem);
     listaNaoOrdenadaAtributos.insertAdjacentElement('beforeend', outrasIdentidadesPersonagem);
