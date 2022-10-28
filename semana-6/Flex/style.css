@@ -6,10 +6,17 @@
     box-sizing: border-box;
 }
 
-body, ul, li, p {
+body, ul, p {
     list-style: none;
     font-size: 1.0rem;
     font-family: Arial;
+}
+
+li {
+    list-style: none;
+    font-size: 1.0rem;
+    font-family: Arial;
+    font-weight: bold;
 }
 
 label {
@@ -32,21 +39,25 @@ a:hover {
 
 
 .container {
-    display: flex;
-    flex-direction: column;
-    /* height: 100vh; */
+    display: grid;
+    grid-template-rows: 8vh 1fr 4vh;
+    /* flex-direction: column; */
+    height: 100vh;
+    /* width: 100vw; */
     font-family: sans-serif;
     font-size: 1em;
     color:  #0E191A;
-    justify-content: center;
+    /* justify-content: center; */
 }
 
 header {
     /* height: 6vh; */
     background-color: #8E1116;
+    display: flex;
+    flex-wrap: wrap;
     color: #E7E7E6;
     text-align: center;
-    flex: grow 0;
+    /* flex: grow 0; */
     justify-content: center;
     align-items: center;
     font-family: sans-serif;
@@ -59,26 +70,44 @@ header {
 
 main {
     background-color: #0E191A;
-    display: flex;
-    flex-direction: column;
-    flex-grow:1;
-    align-items: center;
-    justify-content: space-around;
-    background-image: url(./asset/background.jpg);
+    /* display: flex;
+    flex-direction: column; */
+    /* flex-grow:1; */
+    /* align-items: center;
+    justify-content: space-around; */
+    background-image: url(./asset/marvel-wallpaper.jpg);
     background-size: cover;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(440px, 1fr));
+    justify-items: center;
+    align-items: start;
+    gap: 10px;
+    /* border-radius: 10px; */
 }
 
 .footer {
     /* height: 4vh; */
     display: flex;
-    flex: grow 0;
-    justify-content: space-between;
+    /* flex: grow 0; */
+    /* justify-items: flex-end; */
+    justify-content: center;
     align-items: center;
     font-family: sans-serif;
     bottom: 0;
     background-color: #8E1116;
-    color: #E7E7E6;
+    color: #000000;
     text-align: center;
+    padding: 4px;
+    gap: 1vw;
+}
+
+.imagens-rodape {
+    max-width: 35px;
+    max-height: 35px;
+    padding: 5px;
+    display: flex;
+    align-self: flex-end;
+    justify-self: flex-end;
 }
 
 #busca {
@@ -92,35 +121,51 @@ button {
     border-radius: 5px;
     font-family: sans-serif;
     padding: 0px 10px;
+    background-color: #EB0102;
+    border-radius: 8px;
+    padding: 16px;
+    max-width: 200px;
+    border: none;
+    color: white;
+    /* margin-top: 32px; */
+    cursor: pointer;
 }
 
 button:hover {
     background-color: #E7E7E6; ;
 }
 
-#principal {
-    background-color: #0E191A ;
+/* #principal {
     display: flex;
-    /* flex-wrap: wrap; */
+    flex-wrap: wrap;
+    align-items: center;
     flex-direction: column;
     gap: 7px;
     border-radius: 10px;
-}
+} */
 
 .section-fotos {
+    min-width: 440px;
     max-width: 600px;
     display: flex;    
-    background-color: #8E1116;
+    /* justify-items: center;
+    align-items: center; */
+    background-color: #fc000085;
     border: 1px solid black;
-    border-radius: 10px;
+    border-radius: 12px;
     padding: 10px;
-    display: flex; 
+    /* position: relative; */
+    margin: 30px;
+    padding: 16px;
+    gap: 10px;
 }
 
 .alinhamento {
     display: flex;
     align-items: center;
-    gap: 20px;  
+    justify-content: center;
+    gap: 20px;
+    min-height: 231px;  
 }
 
 img {
@@ -135,4 +180,13 @@ img {
 }
 .alinhar-acima {
     align-self: center;
+}
+
+
+@media screen and (max-device-width: 690px) {
+    .container {
+        display: grid;
+        grid-template-rows: 12vh 1fr 4vh;
+        
+    }
 }

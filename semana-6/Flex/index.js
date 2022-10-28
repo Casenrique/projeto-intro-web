@@ -83,4 +83,38 @@ function adicionaPersonagem (cadaPersonagem, index, arr) {
     divReferenciaLista.insertAdjacentElement('beforeend',listaNaoOrdenadaAtributos)
 }
 
+//Configuração do botão de busca
 
+function procuraPersonagem (event) {
+    let entradaPersonagem = document.getElementById('buscaPersonagem').value;
+    entradaPersonagem = entradaPersonagem.toLowerCase();
+    let buscaClasse = document.getElementsByClassName("section-fotos")
+
+    for (i = 0; i < buscaClasse.length; i++) {
+        if (!buscaClasse[i].innerText.toLowerCase().includes(entradaPersonagem)){
+            buscaClasse[i].style.display="none";
+        } else {
+            buscaClasse[i].style.display="flex";
+        }
+    }
+}
+
+
+
+
+// const inputPersonagem = document.getElementById("personagem")
+// const inputNomePersonagem = inputPersonagem.value
+// function botaoPesquisar () {
+//     console.log(inputPersonagem.value)
+//      recebeArrayObjetos(personagens, inputPersonagem.value)
+// }
+// const recebeArrayObjetos = (arrayInformado, nomeInformado) => {
+//     const resultado = arrayInformado.filter((personagem) => {
+//         console.log(codigoInformado)
+//         return personagem.nome === nomeInformado
+//     })
+//     if (resultado.length > 0) {
+//         console.log(resultado[0])
+//     } else {
+//          alert("Nenhuma Personagem de anchovas encontrada")
+//     }

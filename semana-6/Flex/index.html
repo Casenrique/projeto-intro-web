@@ -12,15 +12,15 @@
     <div class="container">
         <header class="header">
             <h1>Personagens da Marvel</h1>
-        </header>
-        <main>
             <div id="busca">
-                <label for="personagem">Buscador personagem</label>
-                <input type="text" name="personagem" id="personagem" placeholder="Digite o personagem">
-                <button type="button">Buscar</button>
+                <label for="personagem"></label>
+                <input type="text" name="personagem" id="buscaPersonagem" placeholder="Pesquisa" >
+                <button type="button" onclick="procuraPersonagem(event)" >Buscar</button>
             </div>
-            <div id="principal">
-                <div class="section-fotos">
+        </header>
+        <main id="principal">
+            
+                <div class="section-fotos" id="caixa1">
                     <div class="alinhamento" id="box1">
                         <img  src="./asset/Professor_X.jpg" alt="Imagem do Professor X">
                         <!-- <ul>                            
@@ -32,7 +32,7 @@
                         </ul> -->
                     </div>
                 </div>
-                <div class="section-fotos">
+                <div class="section-fotos" id="caixa2">
                     <div class="alinhamento" id="box2">
                         <img src="./asset/Black_Widow.jpg" alt="Imagem da Viúva Negra">
                         <!-- <ul id="lista-2">
@@ -44,7 +44,7 @@
                         </ul> -->
                     </div>
                 </div>
-                <div class="section-fotos">
+                <div class="section-fotos" id="caixa3">
                     <div class="alinhamento" id="box3">
                         <img  src="./asset/Black_Panther.jpg" alt="Imagem do Pantera Negra">
                         <!-- <ul id="lista-3">
@@ -56,7 +56,7 @@
                         </ul> -->
                     </div>
                 </div>
-                <div class="section-fotos">
+                <div class="section-fotos" id="caixa4">
                     <div class="alinhamento" id="box4">
                         <img  src="./asset/Miles_Morales_Spider-Man.jpg" alt="Imagem do Miles Morales">
                         <ul class=id="lista-4">
@@ -64,11 +64,12 @@
                         </ul>
                     </div>
                 </div>
-            </div>
+            
         </main>
         <footer class="footer">
             <p><strong>Criado com HTML e CSS na Labenu por Carlos Henrique de Souza</strong></p>
-            <p><strong><a href="https://github.com/Casenrique" target="_blank">https://github.com/Casenrique</a></strong></p>
+            <a href="https://github.com/Casenrique" target="_blank" rel="noopener noreferrer"><img class="imagens-rodape" src="asset/github.png" alt="Github"></a>
+            <a href="https://www.linkedin.com/in/carlos-henrique-de-souza-1767311a/" target="_blank" rel="noopener noreferrer"><img class="imagens-rodape" src="asset/linkedin.png" alt="Linkedin"></a>
         </footer>
     </div>
 </body>

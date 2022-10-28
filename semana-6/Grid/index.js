@@ -193,3 +193,59 @@ const retornaBlack = personagens.filter((possuiBlackNoNome) => {
 })
 
 console.log(retornaBlack)
+
+personagens.forEach(adicionaPersonagem)
+
+function adicionaPersonagem (cadaPersonagem, index, arr) {
+    console.log(cadaPersonagem)
+    
+    //Criando referência para lista não ordenada
+    let divReferenciaLista = document.getElementById(`box${index+1}`);
+    console.log(divReferenciaLista);
+    let listaNaoOrdenadaAtributos = document.createElement("ul");
+    //Criando items da lista
+    let nomePersonagem = document.createElement("li");
+    let identidadePersonagem = document.createElement("li");
+    let alturaPersonagem = document.createElement("li");
+    let outrasIdentidadesPersonagem = document.createElement("li");
+    //Criando texto dos cards
+    let conteudoNomePersonagem = document.createTextNode(`Nome:  ${cadaPersonagem.nome}`);
+    let conteudoIdentidadePersonagem = document.createTextNode(`Identidade: ${cadaPersonagem.identidade}`);
+    let conteudoAlturaPersonagem = document.createTextNode(`Altura: ${cadaPersonagem.altura}`);
+    let conteudoOutrasIdentidadesPersonagem = document.createTextNode(`Outras Identidades: ${cadaPersonagem.outrasIdentidades}`);
+    //Adicionando conteúdos às tags
+    nomePersonagem.appendChild(conteudoNomePersonagem);
+    identidadePersonagem.appendChild(conteudoIdentidadePersonagem);
+    alturaPersonagem.appendChild(conteudoAlturaPersonagem);
+    outrasIdentidadesPersonagem.appendChild(conteudoOutrasIdentidadesPersonagem);
+        
+    listaNaoOrdenadaAtributos.insertAdjacentElement('beforeend', identidadePersonagem);
+    listaNaoOrdenadaAtributos.insertAdjacentElement('beforeend', alturaPersonagem);
+    listaNaoOrdenadaAtributos.insertAdjacentElement('beforeend', outrasIdentidadesPersonagem);
+    listaNaoOrdenadaAtributos.insertAdjacentElement('afterbegin', nomePersonagem);
+    
+    console.log(conteudoNomePersonagem.textContent);
+
+    console.log(listaNaoOrdenadaAtributos);
+    console.log(nomePersonagem);
+    listaNaoOrdenadaAtributos.insertAdjacentElement('beforeend', nomePersonagem);
+    console.log(listaNaoOrdenadaAtributos);
+    divReferenciaLista.insertAdjacentElement('beforeend',listaNaoOrdenadaAtributos)
+}
+
+//Configuração do botão de busca
+
+function procuraPersonagem (event) {
+    let entradaPersonagem = document.getElementById('buscaPersonagem').value;
+    entradaPersonagem = entradaPersonagem.toLowerCase();
+    let buscaClasse = document.getElementsByClassName("section-fotos")
+
+    for (i = 0; i < buscaClasse.length; i++) {
+        if (!buscaClasse[i].innerText.toLowerCase().includes(entradaPersonagem)){
+            buscaClasse[i].style.display="none";
+        } else {
+            buscaClasse[i].style.display="flex";
+        }
+    }
+}
+
