@@ -1,0 +1,168 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, ul, p {
+    list-style: none;
+    font-size: 1.0rem;
+    font-family: Arial;
+}
+
+li {
+    list-style: none;
+    font-size: 1.0rem;
+    font-family: Arial;
+    font-weight: bold;
+}
+
+label {
+    color: #E7E7E6;
+}
+
+a {
+    text-decoration: none;
+    color: #E7E7E6;
+}
+
+a:link {
+    text-decoration: none;
+    color: #E7E7E6;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+
+.container {
+    display: grid;
+    grid-template-rows: 8vh 1fr 4vh;
+    height: 100vh;
+    font-family: sans-serif;
+    font-size: 1em;
+    color:  #0E191A;
+}
+
+header {
+    /* height: 6vh; */
+    background-color: #8E1116;
+    display: flex;
+    flex-wrap: wrap;
+    color: #E7E7E6;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    font-family: sans-serif;
+    font-size: large;
+}
+
+.header {
+    display: flex;
+}
+
+main {
+    background-color: #0E191A;
+    background-image: url(./asset/marvel2.jpg);
+    /* background-image: url(./asset/marvel-wallpaper.jpg); */
+    background-size: cover;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(440px, 1fr));
+    justify-items: center;
+    align-items: start;
+    gap: 10px;
+}
+
+.footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: sans-serif;
+    bottom: 0;
+    background-color: #8E1116;
+    color: #000000;
+    text-align: center;
+    padding: 4px;
+    gap: 1vw;
+}
+
+.imagens-rodape {
+    max-width: 35px;
+    max-height: 35px;
+    padding: 5px;
+    display: flex;
+    align-self: flex-end;
+    justify-self: flex-end;
+}
+
+#busca {
+    text-align: center;
+    padding: 10px;
+    display: flex;
+    gap: 10px;
+}
+
+button {
+    border-radius: 5px;
+    font-family: sans-serif;
+    padding: 0px 10px;
+    background-color: #EB0102;
+    border-radius: 8px;
+    padding: 16px;
+    max-width: 200px;
+    border: none;
+    color: white;
+    /* margin-top: 32px; */
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #E7E7E6; ;
+}
+
+.section-fotos {
+    min-width: 440px;
+    max-width: 600px;
+    display: flex;    
+    /* justify-items: center;
+    align-items: center; */
+    background-color: #fc000085;
+    border: 1px solid black;
+    border-radius: 12px;
+    padding: 10px;
+    /* position: relative; */
+    margin: 30px;
+    padding: 16px;
+    gap: 10px;
+}
+
+.alinhamento {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    min-height: 231px;  
+}
+
+img {
+    max-width: 150px;
+    border-radius: 5px;
+}
+
+.cor-lista {
+    color:#E7E7E6;
+    text-decoration: none;
+}
+.alinhar-acima {
+    align-self: center;
+}
+
+
+@media screen and (max-device-width: 690px) {
+    .container {
+        display: grid;
+        grid-template-rows: 12vh 1fr 4vh;
+        
+    }
+}
